@@ -6,5 +6,7 @@ RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
 
 RewriteRule ^/?(.*).(html)$ /$1 [R=301,L]
 
+Redirect 301 /index.html 
+
 </IfModule>
 
