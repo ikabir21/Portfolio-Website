@@ -1,0 +1,12 @@
+.sidebar{
+  width: 100%;
+  li{
+    // height: 100%;
+    height: 65px;
+    width: 100%;
+    border-radius: 2px;
+    &:hover{
+      background: #424642;
+    }
+  }
+}

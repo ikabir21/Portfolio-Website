@@ -1,0 +1,20 @@
+.context_menu {
+  position: absolute;
+  background: #2b2b2b;
+  color: #eee;
+  display: inline-block;
+  border-radius: 4px;
+  &_item{
+    padding: 10px 35px;
+    &:first-child{
+      margin-top: 10px;
+    }
+    &:last-child{
+      margin-bottom: 10px;
+    }
+    &:hover{
+      background: #555;
+      cursor: pointer;
+    }
+  }
+}

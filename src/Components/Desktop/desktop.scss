@@ -1,0 +1,24 @@
+.desktop_container{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  padding: 30px 70px;
+  max-height: 100vh;
+  .desktop_apps{
+    display: inline-flex;
+    flex-direction: column;
+    & > div{
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      cursor: context-menu;
+      &:hover{
+        background-color: #424642;
+      }
+    }
+    & > div > img{
+      display: inline;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}

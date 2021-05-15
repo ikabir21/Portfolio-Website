@@ -18,6 +18,17 @@ a{
   background-color: #111;
   color: #eee;
 }
+.bgColor-2{
+  background-color: #151515;
+  color: #eee;
+}
+.textColor-1{
+  color: #eee;
+}
+.mlr-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
 .m-0{
   margin: 0;
 }
@@ -262,4 +273,7 @@ a{
 }
 .text-center{
   text-align: center;
+}
+.fs-small{
+  font-size: 14px;
 }

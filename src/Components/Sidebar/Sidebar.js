@@ -1,18 +1,19 @@
 import React from 'react';
-import AppsIcon from '@material-ui/icons/Apps';
+import { IoApps } from 'react-icons/io5';
+import "./styles.scss";
 
 const Sidebar = () => {
   return (
-    <nav className="position-fixed bgColor-1 flex-column align-center justify-sb" style={{width: "80px", height: "100%"}}>
-      <ul>
-        <li style={{marginTop: "2.5rem"}}>a</li>
-        <li className="mt-5">b</li>
-        <li className="mt-5">c</li>
-        <li className="mt-5">c</li>
-        <li className="mt-5">c</li>
+    <div className="position-fixed bgColor-2 flex-column align-center justify-sb" style={{ width: "60px", height: "100%"}}>
+      <ul className="sidebar mt-5">
+        <li className="flex-center"><IoApps size="2.5rem"/></li>
+        <li className="flex-center"><IoApps size="2.5rem"/></li>
+        <li className="flex-center"><IoApps size="2.5rem"/></li>
+        <li className="flex-center"><IoApps size="2.5rem"/></li>
+        <li className="flex-center"><IoApps size="2.5rem"/></li>
       </ul>
-      <ul><li className="mb-3"><AppsIcon fontSize="large" /></li></ul>
-    </nav>
+      <ul className="sidebar mb-1"><li className="flex-center"><IoApps size="2.5rem"/></li></ul>
+    </div>
   )
 }
 
