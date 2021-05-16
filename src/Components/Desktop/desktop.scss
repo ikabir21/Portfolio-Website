@@ -22,3 +22,69 @@
     }
   }
 }
+.folderCardContainer{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 45%;
+  background-color: #181b28;
+  border-radius: 3px;
+  z-index: 1;
+  .folderNavbar{
+    position: absolute;
+    top: 0;
+    height: 8%;
+    width: 100%;
+    background-color: #0c0e14;
+    z-index: 5;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    &__left > button {
+      color: #fff;
+      border-radius: 30px;
+      border: 0;
+      outline: none;
+      border-color: #3d0d47;
+      box-shadow: 0 0 15px #8700f5;
+      background: linear-gradient(#c00dd4, #8700f5);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.4rem;
+      margin-left: 0.8rem;
+      &>span{
+        margin: 0 0.4rem
+      }
+    }
+  }
+  .folderSideBar1{
+    position: absolute;
+    left: 0;
+    width: 5%;
+    height: 100%;
+    background-color: #171e27;
+    z-index: 2;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #fff;
+    text-align: center;
+  }
+  .folderSideBar2{
+    position: absolute;
+    left: 5%;
+    transform: translateX(-5%);
+    width: 15%;
+    height: 100%;
+    background-color: #161925;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+}
+// #c00dd4
+// #8700f5
