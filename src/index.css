@@ -1,3 +1,11 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+}
 *{
   margin: 0;
   padding: 0;

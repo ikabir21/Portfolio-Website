@@ -2,7 +2,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
-  padding: 30px 70px;
+  padding: 26px 68px;
   max-height: 100vh;
   .desktop_apps{
     display: inline-flex;
@@ -12,7 +12,7 @@
       border-radius: 5px;
       cursor: context-menu;
       &:hover{
-        background-color: #424642;
+        background-color: #616773;
       }
     }
     & > div > img{

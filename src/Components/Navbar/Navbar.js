@@ -5,7 +5,7 @@ import { MdSignalWifi3Bar,  MdBattery90, MdBrightness2, MdVolumeUp, MdArrowDropD
 
 const Navbar = () => {
   return (
-    <nav className="position-fixed bgColor-1 justify-sb align-center" style={{height: "25px", width: "100%", zIndex: "2"}}>
+    <nav className="position-fixed justify-sb align-center" style={{height: "25px", width: "100%", zIndex: "2", backgroundColor: "#1d1d1d", color: "#fff"}}>
       <div>
         <span className="ml-2 mr-2 fw-400 fs-small">Activities</span>
         <hr style={{border: "1px solid #f70", marginTop: "1px"}} />
