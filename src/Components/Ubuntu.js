@@ -5,14 +5,14 @@ import Desktop from './Desktop/Desktop'
 import Navbar from './Navbar/Navbar'
 import Sidebar from './Sidebar/Sidebar';
 
-const Ubuntu = () => {
+const Ubuntu = ({ bgImg }) => {
   return (
     <Router>
       <Navbar />
       <Sidebar />
       <Switch>
-        <Route to="/" exact component={Desktop} />
-        <Route to="/apps" exact component={AppScreen} />
+        <Route path="/" component={() => Desktop(bgImg)} exact />
+        <Route path="/apps" component={() => AppScreen(bgImg)} exact />
       </Switch>
     </Router>
   )

@@ -6,7 +6,7 @@ const DateAndTime = () => {
   const getCurrentTime = new Date().getHours() + ":" + new Date().getMinutes();
   return (
       <div>
-        <span className="fw-300 ml-2 mr-2 fs-small">{getCurrentDate}&nbsp;{getCurrentTime}</span>
+        <span className="fw-300 ml-2 mr-2 fs-xs">{getCurrentDate}&nbsp;{getCurrentTime}</span>
         <hr style={{border: "1px solid #f70", marginTop: "1px"}} />
       </div>
   )
