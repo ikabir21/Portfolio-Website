@@ -3,6 +3,21 @@
   #{$property}: -moz-calc(#{$expression});
   #{$property}: calc(#{$expression}); 
 }
+@mixin top($property, $expression) { 
+  #{$property}: calc(#{$expression}); 
+}
+@mixin left($property, $expression) { 
+  #{$property}: calc(#{$expression}); 
+}
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
 
 .desktop_container{
   background-size: cover;
@@ -33,22 +48,28 @@
   @include calc(width, "100% - 66px");
 }
 .min{
-  @include calc(height, "50% - 25px");
+  @include calc(height, "60% - 25px");
   @include calc(width, "50% - 66px");
+  @media (max-width: 800px){
+    @include calc(height, "100% - 25px");
+    @include calc(width, "100% - 66px");
+  }
+  @media (max-width: 1280px) and (min-width: 800px){
+    @include calc(width, "70% - 66px");
+  }
 }
 .folderCardContainer{
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  // height: 100%;
+  @include left(left, "50% + 66px");
+  @include top(top, "50% + 25px");
+  @include translate(calc(-50% - 33px), calc(-50% - 12.5px));
   background-color: #181b28;
   border-radius: 3px;
   z-index: 1;
   .folderNavbar{
     position: absolute;
     top: 0;
-    height: 8%;
+    height: 36px;
     width: 100%;
     background-color: #0c0e14;
     z-index: 5;
@@ -78,25 +99,33 @@
   .folderSideBar1{
     position: absolute;
     left: 0;
-    width: 5%;
+    width: 6%;
     height: 100%;
     background-color: #171e27;
     z-index: 2;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     color: #fff;
-    text-align: center;
+    padding-top: 35px;
+    @media (max-width: 800px){
+      width: 8%;
+    }
   }
   .folderSideBar2{
     position: absolute;
-    left: 5%;
-    transform: translateX(-5%);
-    width: 15%;
+    left: 6%;
+    transform: translateX(-3%);
+    width: 18%;
     height: 100%;
     background-color: #161925;
     z-index: 2;
     color: #fff;
-    text-align: center;
+    padding-top: 35px;
+    @media (max-width: 800px){
+      width: 20%;
+      left: 8%;
+      transform: translateX(-4%);
+    }
   }
 }
 // #c00dd4

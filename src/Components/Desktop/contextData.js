@@ -1,14 +1,22 @@
-export const data = {
-  rename: {
-    name: "Rename",
+export const data = [
+  {
+    name: "New Folder",
     id: 1
   },
-  copy: {
-    name: "Copy",
+  {
+    name: "Paste",
     id: 2
   },
-  delete: {
-    name: "Delete",
+  {
+    name: "Show Desktop in Files",
     id: 3
+  },
+  {
+    name: "Open in Terminal",
+    id: 3
+  },
+  {
+    name: "Change Background",
+    id: 4
   }
-}
+]

@@ -18,10 +18,11 @@ const Desktop = (bgImg) => {
     !showContextMenu ? setContextMenu(true) : setContextMenu(false);
     const x = e.clientX;
     const y = e.clientY;
+    console.log(x, y);
     let _coordinate = { x, y };
-    if (x + 132 > window.innerWidth) _coordinate = { x: x - 132, y };
-    if (y + 137 > window.innerHeight) _coordinate = { x, y: y - 137 };
-    if (x + 132 > window.innerWidth && y + 137 > window.innerHeight) _coordinate = { x: x - 132, y: y - 137 };
+    if (x + 223.825 > window.innerWidth) _coordinate = { x: x - 223.825, y };
+    if (y + 268 > window.innerHeight) _coordinate = { x, y: y - 268 };
+    if (x + 223.825 > window.innerWidth && y + 268 > window.innerHeight) _coordinate = { x: x - 223.825, y: y - 268 };
     setCoordinate(_coordinate);
   };
 
@@ -48,7 +49,7 @@ const Desktop = (bgImg) => {
           <p className="textColor-1">Trash</p>
         </div>
       </div>
-      { showContextMenu && <ContextMenu coordinate={coordinate} contextItem={[data.rename, data.copy, data.delete]} />}
+      { showContextMenu && <ContextMenu coordinate={coordinate} contextItem={data} />}
     </div>
   )
 }
@@ -56,19 +57,15 @@ const Desktop = (bgImg) => {
 
 const FolderCard = (props) => {
   const [isMax, setMax] = useState(false);
-  const [isMin, setMin] = useState(true);
-  const [isClosed, setClosed] = useState(true);
   const [folderClass, setFolderCard] = useState("folderCardContainer")
   console.log(props);
   useEffect(() => {
     isMax ? setFolderCard("max folderCardContainer") : setFolderCard("min folderCardContainer");
-    // isMin && setFolderCard("none folderCardContainer");
-  }, [isMax, isClosed, isMin])
-    // isMax ? "max folderCardContainer" : "min folderCardContainer"
+  }, [isMax])
   return (
     <div className={folderClass}>
-      <div className="folderNavbar">
-        <div className="folderNavbar__left flex-center">
+      <div className="folderNavbar align-center">
+        <div className="folderNavbar__left flex-center align-center">
           <IoChevronBackSharp />
           <span className="mr-1"></span>
           <IoChevronForwardSharp />
@@ -81,18 +78,17 @@ const FolderCard = (props) => {
         <div className="folderNavbar__right flex-center">
           <img onClick={() => !props.card ? props.setCard(true) : props.setCard(false)} src="./assets/svg-icons/min.svg" alt="min" />
           <img onClick={() => !isMax ? setMax(true) : setMax(false)} className="mr-1 ml-1" src="./assets/svg-icons/maximize.svg" alt="max" />
-          {/* <img onMouseOver={(e) => handleHover} src="./assets/svg-icons/close_prelight.svg" alt="closeOnHover" /> */}
           <img onClick={() => !props.card ? props.setCard(true) : props.setCard(false)} src="./assets/svg-icons/close.svg" alt="close" />
         </div>
       </div>
-      <div className="folderSideBar1 textColor-1 pt-5">
+      <div className="folderSideBar1 textColor-1 text-center">
         <p className="mt-2"><IoStar /></p>
         <p className="mt-2"><IoPersonOutline /></p>
         <p className="mt-2"><IoBookOutline /></p>
         <p className="mt-2"><MdWork /></p>
         <p className="mt-2"><GiSkills /></p>
       </div>
-      <div className="folderSideBar2 textColor-1 pt-5">
+      <div className="folderSideBar2 textColor-1">
         <p className="mt-2 ml-2 text-start">Starred</p>
         <p className="mt-2 ml-2 text-start">About</p>
         <p className="mt-2 ml-2 text-start">Education</p>
