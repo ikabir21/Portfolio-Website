@@ -1,3 +1,9 @@
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+}
+
 .desktop_container{
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,14 +28,20 @@
     }
   }
 }
+.max{
+  @include calc(height, "100% - 25px");
+  @include calc(width, "100% - 66px");
+}
+.min{
+  @include calc(height, "50% - 25px");
+  @include calc(width, "50% - 66px");
+}
 .folderCardContainer{
-  // margin-left: 66px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
-  width: 45%;
+  // height: 100%;
   background-color: #181b28;
   border-radius: 3px;
   z-index: 1;
@@ -61,12 +73,6 @@
       &>span{
         margin: 0 0.4rem
       }
-    }
-    .none{
-      display: none;
-    }
-    .show{
-      display: block;
     }
   }
   .folderSideBar1{

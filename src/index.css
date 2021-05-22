@@ -10,6 +10,7 @@ html {
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  cursor: default;
 }
 *, *::after, *::before {
   box-sizing: border-box;
