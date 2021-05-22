@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <div className="position-fixed flex-column bgColor-2 flex-column align-center justify-sb" style={{ height: "100%" }}>
-      <ul className="sidebar plr-1 mt-5">
+      <ul style={{height: "90%"}} className="sidebar plr-1 mt-5">
         {apps.map(app => (
           <li className="flex-center" key={app.id}><VscCircleFilled style={{ visibility: active ? "visible" : "hidden", color: "#ff423e" }} size="0.8rem" />{app.icon}<VscCircleFilled style={{ visibility: "hidden" }} size="0.8rem" /></li>
         ))}

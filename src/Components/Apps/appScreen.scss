@@ -4,7 +4,10 @@
   background-position-x: center;
   z-index: -1;
   height: 100vh;
-  padding-left: 68px;
+  margin-left: 66px;
+  // @media (min-width: 768px) {
+  //   padding: 0 10rem;
+  // }
   // opacity: 0.8;
   .searchBar {
     border: none;
@@ -13,9 +16,31 @@
     margin-top: 40px;
     width: 25%;
     color: #222831;
+    @media (max-width: 768px) {
+      width: 50%;
+    }
     &:focus {
       // box-shadow: 0px 0px 0px 1px red inset;
       box-shadow: 0 0 10px #eaeaea;
+    }
+  }
+  .apps_container{
+    width: 70%;
+    height: 80%;
+    // margin: 2rem;
+    .row{
+      height: 25%;
+      width: 100%;
+    }
+    .col{
+      width: 16.67%;
+      height: 100%;
+      @media (min-width: 768px) {
+        &:hover {
+          background: #616773;
+          border-radius: 5px;
+        }
+      }
     }
   }
   .footer {
